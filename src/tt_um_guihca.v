@@ -12,11 +12,17 @@ module tt_um_guihca #( parameter MAX_COUNT = 24'd10_000_000 ) (
 );
     
 wire [7:0]i,o,io;
-reg [63:0] ri;
-reg [5:0] con;
+assign i=ui_in;
+assign uo_out=o;
+assign uio_oe=io;
+assign uio_oe=8'd0;
+//reg [63:0] ri;
+//reg [5:0] con;
+    
   always @(posedge clk) begin
-    ri[con]<=i[0];
-    con<=con+1;
+    o=i+io;
+    //ri[con]<=i[0];
+    //con<=con+1;
   end
 
 endmodule
