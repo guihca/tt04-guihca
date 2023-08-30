@@ -17,6 +17,7 @@ assign ioi=uio_in;
 assign uo_out=o;
 assign uio_out=ioo;
 assign uio_oe=8'd0;
+assign ioo=8'd0;
 //reg [63:0] ri;
 //reg [5:0] con;
 assign o=i+ioi;
