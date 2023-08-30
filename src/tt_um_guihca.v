@@ -11,14 +11,15 @@ module tt_um_guihca #( parameter MAX_COUNT = 24'd10_000_000 ) (
     input  wire       rst_n     // reset_n - low to reset
 );
     
-wire [7:0]i,o,io;
+wire [7:0]i,o,ioo,ioi;
 assign i=ui_in;
+assign ioi=uio_in;
 assign uo_out=o;
-assign io=uio_oe;
+assign uio_out=ioo;
 assign uio_oe=8'd0;
 //reg [63:0] ri;
 //reg [5:0] con;
-assign o=i+io;
+assign o=i+ioi;
   always @(posedge clk) begin
     
     //ri[con]<=i[0];
