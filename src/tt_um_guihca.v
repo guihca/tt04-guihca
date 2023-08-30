@@ -20,7 +20,7 @@ assign uio_oe=8'd0;
 //reg [5:0] con;
     
   always @(posedge clk) begin
-    o=i+io;
+    o<=i+io;
     //ri[con]<=i[0];
     //con<=con+1;
   end
