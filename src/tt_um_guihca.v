@@ -21,10 +21,7 @@ assign ioo=8'd0;
 //reg [63:0] ri;
 //reg [5:0] con;
     assign o[7:1]=0;
-    sky130_fd_sc_hd__mux2_1 s0muxa1 (
-        .A0(i[0]), .A1(i[1]), .S(i[2]),
-        .Y(o[0])
-    );
+    sky130_fd_sc_hd__mux2_1 mux0 (.A0(i[0]),.A1(i[1]),.S(i[2]),.Y(o[0]));
     //assign o=i+ioi;
   always @(posedge clk) begin
     
