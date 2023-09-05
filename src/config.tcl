@@ -57,6 +57,3 @@ set ::env(CLOCK_PORT) {clk}
 # don't use power rings or met5
 set ::env(DESIGN_IS_CORE) 0
 set ::env(RT_MAX_LAYER) {met4}
-
-set ::env(LINTER_INCLUDE_PDK_MODELS) 1
-#set ::env(RUN_LINTER) 0
